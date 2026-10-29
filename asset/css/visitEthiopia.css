@@ -37,6 +37,9 @@ body{
     list-style-type: none;
     gap: 25px;
 }
+.head li::first-letter{
+    font-size:20px;
+}
 .head a{
     color: white;
     transition:  0.8s ease;
@@ -84,16 +87,26 @@ body{
     margin-top: 25px;
     font-weight: bold;
     font-size: 16px;
+    transition:transform 0.2s ease
 }
-
+.main_container button:hover{
+    transform: translateY(-5px);
+}
 .adv_box {
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     background-color:rgb(34, 42, 50); 
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 25px;
+    transition: transform 0.2s ease;
+}
+.adv_box:hover{
+    transform: translateY(-7px);
+    background-color:rgb(49, 58, 68); 
+    border:  1px solid burlywood;
+    
 }
 .adv_box img{
     display: flex;
@@ -130,6 +143,11 @@ body{
     align-self: center;
     
 }
+.adv_box button:hover{
+    background-color: rgb(236, 174, 94);
+    color: black;
+
+}
 .sec2 {
     display: flex;
     flex-wrap: wrap;
@@ -144,3 +162,135 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+#contact{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ input ,textarea{
+    background-color:rgb(58, 72, 86);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    
+    
+}
+input::placeholder ,textarea::placeholder{
+    color: rgb(154, 154, 154)
+    
+}
+input:focus ,textarea:focus{
+    border-color: rgb(184, 115, 25);
+    outline: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    
+}
+textarea{
+    width: 100%;
+    height: 200px;
+  
+}
+form button{
+    width: 200px;
+    padding: 15px;
+    border-radius: 35px;
+    background-color:rgb(223, 165, 89);
+    font-size: 18px;
+}
+form button:hover{
+    background-color:rgb(239, 181, 104);
+}
+.input-row{
+   display: flex;
+   gap: 10px;
+}
+main{
+    padding-bottom: 50px;
+}
+footer{
+    padding-top: 50px;
+    background-color:rgb(22, 29, 35);
+    padding-bottom: 100px;
+}
+.box{
+    color: burlywood;
+    display: flex;
+    flex-direction: column;
+}
+.box a{
+    color: lightgrey;
+    text-decoration: none;
+    line-height: 1.9;
+}
+.box a:hover{
+    color: white;
+}
+.box h1{
+      text-decoration: underline;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.footer-box{
+    display: flex;
+    gap: 100px;
+    padding-left: 100px;
+    
+}
+.copyright{
+    margin-top: 50px;
+    color: lightgrey;
+    font-size: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+.copyright h1{
+    line-height: 2;
+
+}
+.toggle-button span{
+    display: block;
+    background-color: white;
+    margin: 0.2rem;
+    border: 1px solid rgb(245, 243, 243);
+    width: 2rem;
+}
+@media(max-width:750px){
+
+    .toggle-button{
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 0rem;
+    }
+
+.sub-menu{
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+.menubarContainer:hover .sub-menu{
+    display: block;
+}
+.menubarContainer:hover ul{
+    display: flex;
+    flex-direction: column;
+}
+.sec2{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+}
+@media(min-width:750px){
+    .toggle-button{
+        display: none;
+    }}
